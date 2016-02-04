@@ -30,7 +30,7 @@ public class TwitterTrendingTopology{
     .groupBy(new Fields(Constants.HASHTAG))
     .persistentAggregate(new MemoryMapState.Factory(), new Count(), new Fields(Constants.COUNT))
     .newValuesStream()
-    .applyAssembly(new FirstN(10, Constants.COUNT))
+    .applyAssembly(new FirstN(Constants.FIRSTN, Constants.COUNT))
     .each(new Fields(Constants.HASHTAG, Constants.COUNT), new DisplayTrending());
     //Build and return the topology
     return topology.build();
