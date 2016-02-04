@@ -9,7 +9,9 @@ public class Constants{
   public static final String SPOUT = "spout";
   public static final String HASHTAG = "hashtag";
   public static final String COUNT = "count";
-
+  
+  public static final int FIRSTN = 10;
+  
   //Customized part, you need to find all access from your developer account
   public static final String ACCESSTOKENSECRET = "";
   public static final String ACCESSTOKEN = "";
